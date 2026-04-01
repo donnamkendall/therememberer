@@ -10,16 +10,16 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --ink: #1a1714;
-    --ink-soft: #3d3830;
-    --ink-muted: #7a7266;
+    --ink: #1f1a2e;
+    --ink-soft: #2e2645;
+    --ink-muted: #6b6488;
     --parchment: #f5f0e8;
     --parchment-dark: #ede6d6;
-    --ember: #8B3A1C;
-    --ember-light: #c45e35;
+    --ember: #c9a96e;
+    --ember-light: #d4bf8a;
     --sage: #4a5c4e;
-    --gold: #b08d57;
-    --gold-light: #d4af7a;
+    --gold: #b8976a;
+    --gold-light: #d4bf8a;
     --serif: 'Cormorant Garamond', Georgia, serif;
     --sans: 'Jost', sans-serif;
   }
@@ -151,7 +151,7 @@
     font-size: clamp(20px, 2.2vw, 26px);
     font-weight: 300;
     font-style: italic;
-    color: var(--ink-soft);
+    color: #2e2645;
     line-height: 1.6;
     max-width: 480px;
     margin-bottom: 56px;
@@ -177,7 +177,7 @@
     display: inline-block;
     padding: 16px 40px;
     background: var(--ember);
-    color: var(--parchment);
+    color: #1f1a2e;
     font-family: var(--sans);
     font-size: 11px;
     font-weight: 400;
@@ -218,7 +218,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at 30% 60%, #3d2e1e 0%, #1a1714 60%);
+    background: radial-gradient(ellipse at 30% 60%, #2d2645 0%, #1f1a2e 60%);
   }
 
   .hero-symbol {
@@ -342,7 +342,7 @@
     top: -100px; right: -100px;
     width: 400px; height: 400px;
     border-radius: 50%;
-    background: radial-gradient(circle, #3d2e1e 0%, transparent 70%);
+    background: radial-gradient(circle, #2d2645 0%, transparent 70%);
     opacity: 0.5;
   }
 
@@ -590,7 +590,7 @@
     transform: translateX(-50%);
     width: 600px; height: 600px;
     border-radius: 50%;
-    background: radial-gradient(circle, #3d2e1e 0%, transparent 70%);
+    background: radial-gradient(circle, #2d2645 0%, transparent 70%);
     opacity: 0.4;
   }
 
@@ -914,7 +914,7 @@
     top: -80px; left: -80px;
     width: 500px; height: 500px;
     border-radius: 50%;
-    background: radial-gradient(circle, #3d2e1e 0%, transparent 65%);
+    background: radial-gradient(circle, #2d2645 0%, transparent 65%);
     opacity: 0.5;
   "></div>
   <div style="
@@ -922,7 +922,7 @@
     bottom: -120px; right: -60px;
     width: 400px; height: 400px;
     border-radius: 50%;
-    background: radial-gradient(circle, #1a2e20 0%, transparent 65%);
+    background: radial-gradient(circle, #16192b 0%, transparent 65%);
     opacity: 0.3;
   "></div>
 
@@ -1010,8 +1010,188 @@
   </div>
 </section>
 
+
+<!-- CONTACT FORM -->
+<section id="begin" style="
+  padding: 100px 80px;
+  background: var(--parchment-dark);
+  position: relative;
+  overflow: hidden;
+">
+  <div style="
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 350px; height: 350px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(124,92,191,0.08) 0%, transparent 70%);
+  "></div>
+
+  <div style="max-width: 640px; margin: 0 auto; position: relative; z-index: 2;">
+
+    <p class="reveal" style="
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--ember);
+      margin-bottom: 20px;
+    ">Begin the return</p>
+
+    <h2 class="reveal" style="
+      font-family: var(--serif);
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 16px;
+    ">One conversation<br>changes everything.</h2>
+
+    <p class="reveal" style="
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--ink-muted);
+      line-height: 1.9;
+      margin-bottom: 48px;
+    ">Tell me where you are. I read every message personally.</p>
+
+    <form
+      action="https://formspree.io/f/xykbpgze"
+      method="POST"
+      style="display: flex; flex-direction: column; gap: 24px;"
+    >
+      <!-- Name -->
+      <div class="reveal" style="display: flex; flex-direction: column; gap: 8px;">
+        <label style="
+          font-size: 10px;
+          font-weight: 400;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          color: var(--ink-muted);
+        ">Your name</label>
+        <input
+          type="text"
+          name="name"
+          required
+          placeholder="First name"
+          style="
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(31,26,46,0.2);
+            padding: 12px 0;
+            font-family: var(--sans);
+            font-size: 16px;
+            font-weight: 300;
+            color: var(--ink);
+            outline: none;
+            transition: border-color 0.3s;
+            width: 100%;
+          "
+          onfocus="this.style.borderColor='var(--ember)'"
+          onblur="this.style.borderColor='rgba(31,26,46,0.2)'"
+        >
+      </div>
+
+      <!-- Email -->
+      <div class="reveal" style="display: flex; flex-direction: column; gap: 8px;">
+        <label style="
+          font-size: 10px;
+          font-weight: 400;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          color: var(--ink-muted);
+        ">Your email</label>
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="where I can reach you"
+          style="
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(31,26,46,0.2);
+            padding: 12px 0;
+            font-family: var(--sans);
+            font-size: 16px;
+            font-weight: 300;
+            color: var(--ink);
+            outline: none;
+            transition: border-color 0.3s;
+            width: 100%;
+          "
+          onfocus="this.style.borderColor='var(--ember)'"
+          onblur="this.style.borderColor='rgba(31,26,46,0.2)'"
+        >
+      </div>
+
+      <!-- The question -->
+      <div class="reveal" style="display: flex; flex-direction: column; gap: 8px;">
+        <label style="
+          font-size: 10px;
+          font-weight: 400;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          color: var(--ink-muted);
+        ">If nothing from your past could hold you back —<br>what would you be living right now?</label>
+        <textarea
+          name="message"
+          required
+          rows="5"
+          placeholder="Take your time. This is just for you and me."
+          style="
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(31,26,46,0.2);
+            padding: 12px 0;
+            font-family: var(--serif);
+            font-size: 17px;
+            font-style: italic;
+            font-weight: 300;
+            color: var(--ink);
+            outline: none;
+            resize: none;
+            transition: border-color 0.3s;
+            width: 100%;
+            line-height: 1.8;
+          "
+          onfocus="this.style.borderColor='var(--ember)'"
+          onblur="this.style.borderColor='rgba(31,26,46,0.2)'"
+        ></textarea>
+      </div>
+
+      <!-- Submit -->
+      <div class="reveal" style="display: flex; align-items: center; gap: 24px; margin-top: 8px;">
+        <button
+          type="submit"
+          style="
+            padding: 16px 44px;
+            background: var(--ink);
+            color: var(--parchment);
+            font-family: var(--sans);
+            font-size: 11px;
+            font-weight: 400;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+          "
+          onmouseover="this.style.background='var(--ember)'; this.style.color='var(--ink)'"
+          onmouseout="this.style.background='var(--ink)'; this.style.color='var(--parchment)'"
+        >Send my message</button>
+        <span style="
+          font-family: var(--serif);
+          font-size: 13px;
+          font-style: italic;
+          color: var(--ink-muted);
+        ">I read every word personally.</span>
+      </div>
+
+    </form>
+  </div>
+</section>
+
 <!-- CLOSING CTA -->
-<section class="closing" id="begin">
+<section class="closing" id="closing">
   <h2 class="reveal">You haven't lost yourself.<br>You've just forgotten<br><strong>the way home.</strong></h2>
   <p class="reveal">The return begins with one conversation.</p>
   <a href="#" class="btn-primary reveal">Begin the Return</a>
